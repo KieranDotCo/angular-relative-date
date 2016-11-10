@@ -43,7 +43,7 @@ describe('Filter: relativeDate', function() {
     expect(relativeDate('2013-03-01')).toEqual('6 months ago')
     expect(relativeDate('2012-09-07')).toEqual('a year ago')
     expect(relativeDate('2012-04-07')).toEqual('a year ago')
-    expect(relativeDate('2011-04-07')).toEqual('over a year ago')
+    expect(relativeDate('2011-04-07')).toEqual('2 years ago')
 
     // Future
     expect(relativeDate('2013-09-07T12:00:31Z')).toEqual('31 seconds from now')
@@ -66,7 +66,7 @@ describe('Filter: relativeDate', function() {
     expect(relativeDate('2014-03-07T12:00:00Z')).toEqual('6 months from now')
     expect(relativeDate('2014-09-07T12:00:00Z')).toEqual('a year from now')
     expect(relativeDate('2015-01-07T12:00:00Z')).toEqual('a year from now')
-    expect(relativeDate('2015-10-07T12:00:00Z')).toEqual('over a year from now')
+    expect(relativeDate('2015-10-07T12:00:00Z')).toEqual('2 years from now')
   })
 })
 

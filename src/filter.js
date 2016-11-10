@@ -92,6 +92,9 @@ export default function relativeDateFilter ($injector, _now, relativeDateTransla
       case Math.floor(delta / year) !== 1:
         return translate('a_year')
 
+      case Math.floor(delta / year) <= 1:
+        return translate('years', Math.floor(delta / year))
+
       default:
         return translate('over_a_year')
     }
